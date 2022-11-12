@@ -18,7 +18,7 @@ public class SwiftFileMd5Plugin: NSObject, FlutterPlugin {
     ) -> String? {
         let fileUrl = URL(fileURLWithPath: filePath)
         do {
-            return try get(url: fileUrl)
+            return try getFileMd5ByUrl(url: fileUrl)
         } catch (let exception) {
             error.pointee = FlutterError(
                 code: "PLATFORM_EXCEPTION",

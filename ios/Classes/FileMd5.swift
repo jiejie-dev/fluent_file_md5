@@ -3,7 +3,7 @@ import CryptoKit
 
 // Reference: https://stackoverflow.com/questions/42935148/swift-calculate-md5-checksum-for-large-files
 
-func get(url: URL) throws -> String? {
+func getFileMd5ByUrl(url: URL) throws -> String? {
     let file = try FileHandle(forReadingFrom: url)
     defer {
         file.closeFile()
